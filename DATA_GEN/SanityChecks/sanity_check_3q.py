@@ -78,15 +78,6 @@ def check_dataset(path, feature_prefix, name):
     plt.tight_layout()
     plt.show()
 
-    print("\nExpected sanity checklist:")
-    print("- Feature values in [-1,1] because they are ⟨σ_a⊗σ_b⊗σ_c⟩ ✔")
-    print("- Label in [0,1] since it's based on local purities ✔")
-    print("- Significant fraction with E=0 (separable mixtures) ✔")
-    print("- Wide spread of E>0 for entangled pure/mixed states ✔")
-    print("- Correlations of individual features with label likely small,")
-    print("  since entanglement depends on a nonlinear combination of all features.\n")
-
-
 if __name__ == "__main__":
     check_dataset(F1_PATH, feature_prefix="F1_", name="3-qubit F1 dataset")
     check_dataset(F2_PATH, feature_prefix="F2_", name="3-qubit F2 dataset")
